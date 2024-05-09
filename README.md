@@ -15,7 +15,6 @@ Feel free to fork this repository and submit pull requests to contribute 🤝.
 This project is purely educational and self-driven. I am not using ChatGPT or any other AI-based coding assistant in this challenge 🚫🤖.
 
 ## License
-This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International. The problems are taken from [Project Euler](https://projecteuler.net/](https://projecteuler.net/copyright)) and are copyrighted by Project Euler under the same license.
-
+This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International. The problems are taken from [Project Euler](https://projecteuler.net/copyright) and are copyrighted by Project Euler under the same license.
 
 Happy coding! 🎈👨‍💻🎉
