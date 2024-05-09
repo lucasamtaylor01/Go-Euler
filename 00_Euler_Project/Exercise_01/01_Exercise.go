@@ -10,11 +10,17 @@ package main
 import "fmt"
 
 func main() {
-	soma := 0
-	for i := 0; i < 1000; i++ {
-		if i%5 == 0 || i%3 == 0 {
-			soma += i
-		}
-	}
-	fmt.Print(soma, "\n")
+    // Initialize sum to accumulate multiples of 3 or 5.
+    sum := 0
+    
+    // Loop through numbers from 0 to 999.
+    for i := 0; i < 1000; i++ {
+        // Add to sum if i is a multiple of 3 or 5.
+        if i%5 == 0 || i%3 == 0 {
+            sum += i
+        }
+    }
+    
+    // Print the computed sum.
+    fmt.Println(sum)
 }
