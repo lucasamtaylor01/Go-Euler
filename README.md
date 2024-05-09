@@ -5,7 +5,7 @@ Welcome to my repository! 🎉 I'm tackling the [Project Euler](https://projecte
 
 ## Goals
 - **Daily Commitment:** Commit to coding every day for 100 days 📆🔥.
-- **Problem Solving:** Improve my problem-solving skills by tackling complex algorithms. 🧠💡
+- **Problem Solving:** Improve my problem-solving skills 🧠💡
 - **Go Proficiency:** Enhance my Go programming skills. 🐹📈
 
 ## Contributing
