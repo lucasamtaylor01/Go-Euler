@@ -27,6 +27,7 @@ This project is purely educational and self-driven. I am not using ChatGPT or an
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 
 Failed attempts:1
+
 Current attempt: 2
 
 Happy coding! 🎈👨‍💻🎉
