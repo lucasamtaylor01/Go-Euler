@@ -9,7 +9,7 @@ import (
 func main() {
 
 	//Read file
-	b, err := os.ReadFile("number.txt") // just pass the file name
+	b, err := os.ReadFile("number.txt") 
 	if err != nil {
 		fmt.Print(err)
 	}
