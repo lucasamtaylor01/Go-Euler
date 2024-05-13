@@ -15,7 +15,7 @@ Feel free to fork this repository and submit pull requests to contribute 🤝.
 This project is purely educational and self-driven. I am not using ChatGPT or any other AI-based coding assistant in this challenge 🚫🤖.
 
 ## 100 days progress
-✅⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
+✅✅⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
@@ -29,5 +29,7 @@ This project is purely educational and self-driven. I am not using ChatGPT or an
 Failed attempts:1
 
 Current attempt: 2
+
+Record: 2 days
 
 Happy coding! 🎈👨‍💻🎉
