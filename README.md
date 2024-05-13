@@ -26,10 +26,9 @@ This project is purely educational and self-driven. I am not using ChatGPT or an
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 
-Failed attempts:1
+## Attempt Status
+  - **Current Streak:** 2 days 🌟
+  - **Best Record:** 2 days 🏆
+  - **Failed Attempts:** 1 🚫
 
-Current attempt: 2
-
-Record: 2 days
-
-Happy coding! 🎈👨‍💻🎉
+Happy coding! 👨‍💻
