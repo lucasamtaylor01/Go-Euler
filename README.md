@@ -29,6 +29,7 @@ This project is purely educational and self-driven. I am not using ChatGPT or an
 ## Attempt Status
   - **Current Streak:** 2 days 🌟
   - **Best Record:** 2 days 🏆
+  - **Current Attempt:** 2 🎯
   - **Failed Attempts:** 1 🚫
 
 Happy coding! 👨‍💻
