@@ -29,4 +29,4 @@ This project is purely educational and self-driven. I am not using ChatGPT or an
   - **Current Attempt:** 2 🎯
   - **Failed Attempts:** 1 🚫
 
-Happy coding! 👨‍💻
+Happy coding!👨🏾‍💻
