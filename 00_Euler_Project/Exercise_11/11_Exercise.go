@@ -23,7 +23,7 @@ func e_verify(index, list_length int) bool {
 }
 
 func s_verify(index, list_length int) bool {
-	if index+40 < list_length {
+	if index+30 < list_length {
 		return true
 	} else {
 		return false
@@ -31,21 +31,12 @@ func s_verify(index, list_length int) bool {
 }
 
 func n_verify(index int) bool {
-	if index-40 >= 0 {
+	if index-30 >= 0 {
 		return true
 	} else {
 		return false
 	}
 }
-
-func ne_verify(index, list_lenght int) bool {
-	if n_verify(index) && e_verify(index, list_lenght) {
-		return true
-	} else {
-		return false
-	}
-}
-
 func main() {
 
 	//Read file
@@ -69,7 +60,52 @@ func main() {
 			}
 		}
 	}
+	var greatest, lenght int = 0, 5
 
-	fmt.Println(len(number_list))
+	for i := 0; i < lenght; i++ {
+		if w_verify(i) {
+			var product int = 1
+			for j := i - 3; j <= i; j++ {
+				product *= number_list[j]
+			}
+			if product > greatest {
+				greatest = product
+			}
+		}
 
+		if e_verify(i, lenght) {
+			var product int = 1
+			for j := i; j <= i+3; j++ {
+				product *= number_list[j]
+			}
+			if product > greatest {
+				greatest = product
+			}
+		}
+
+		if n_verify(i) {
+			var product, counter int = 1, 1
+			for j := i; counter < 4; j++ {
+				product *= number_list[j-10*counter]
+			}
+			if product > greatest {
+				greatest = product
+			}
+		}
+
+		if s_verify(i, lenght) {
+			var product, counter int = 1, 0
+			for j := i; counter < 4; j++ {
+				product *= number_list[j+10*counter]
+			}
+			if product > greatest {
+				greatest = product
+			}
+		}
+	}
+	fmt.Println(greatest)
 }
+
+
+/* Lembrar que é uma matriz 20x20 e para verificar que existe uma diagonal é necessário as condições de norte e sul, junto com a verificação de que é menor que 20 ou não 
+logaicamente, dependendo da casa atual*/
