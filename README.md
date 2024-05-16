@@ -12,7 +12,7 @@ Welcome to my repository! 🎉 I'm tackling the [Project Euler](https://projecte
 This project is purely educational and self-driven. I am not using ChatGPT or any other AI-based coding assistant in this challenge 🚫🤖.
 
 ## 100 days progress
-✅✅✅✅⬜️⬜️⬜️⬜️⬜️⬜️
+✅✅✅✅✅⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
@@ -24,8 +24,8 @@ This project is purely educational and self-driven. I am not using ChatGPT or an
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 
 ## Attempt Status
-  - **Current Streak:** 4 days 🌟
-  - **Best Record:** 4 days 🏆
+  - **Current Streak:** 5 days 🌟
+  - **Best Record:** 5 days 🏆
   - **Current Attempt:** 2 🎯
   - **Failed Attempts:** 1 🚫
 
