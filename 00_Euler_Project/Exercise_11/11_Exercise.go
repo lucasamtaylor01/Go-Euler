@@ -7,23 +7,33 @@ import (
 )
 
 func w_verify(index int) bool {
-	if index-3 >= 0 {
-		return true
-	} else {
+	if index-3 < 0 {
 		return false
 	}
+
+	for i := index; i < index-3; i-- {
+		if i%20 == 0 {
+			return false
+		}
+	}
+	return true
 }
 
 func e_verify(index, list_length int) bool {
-	if index+3 < list_length {
-		return true
-	} else {
+	if index+3 >= list_length {
 		return false
 	}
+
+	for i := index; i < index+3; i++ {
+		if (i+1)%20 == 0 {
+			return false
+		}
+	}
+	return true
 }
 
 func s_verify(index, list_length int) bool {
-	if index+30 < list_length {
+	if index+60 < list_length {
 		return true
 	} else {
 		return false
@@ -31,12 +41,45 @@ func s_verify(index, list_length int) bool {
 }
 
 func n_verify(index int) bool {
-	if index-30 >= 0 {
+	if index-60 >= 0 {
 		return true
 	} else {
 		return false
 	}
 }
+
+func ne_verify(index, list_length int) bool {
+	if n_verify(index) && e_verify(index, list_length) {
+		return true
+	} else {
+		return false
+	}
+}
+
+func nw_verify(index int) bool {
+	if n_verify(index) && w_verify(index) {
+		return true
+	} else {
+		return false
+	}
+}
+
+func se_verify(index, list_length int) bool {
+	if s_verify(index, list_length) && e_verify(index, list_length) {
+		return true
+	} else {
+		return false
+	}
+}
+
+func sw_verify(index, list_length int) bool {
+	if s_verify(index, list_length) && w_verify(index) {
+		return true
+	} else {
+		return false
+	}
+}
+
 func main() {
 
 	//Read file
@@ -60,13 +103,13 @@ func main() {
 			}
 		}
 	}
-	var greatest, lenght int = 0, 5
+	var greatest, lenght int = 0, len(number_list)
 
 	for i := 0; i < lenght; i++ {
 		if w_verify(i) {
 			var product int = 1
-			for j := i - 3; j <= i; j++ {
-				product *= number_list[j]
+			for counter := 3; counter <= 0; counter-- { // zero tá incluso?
+				product *= number_list[i+counter]
 			}
 			if product > greatest {
 				greatest = product
@@ -75,8 +118,8 @@ func main() {
 
 		if e_verify(i, lenght) {
 			var product int = 1
-			for j := i; j <= i+3; j++ {
-				product *= number_list[j]
+			for counter := 0; counter < 4; counter++ {
+				product *= number_list[i+counter]
 			}
 			if product > greatest {
 				greatest = product
@@ -84,9 +127,9 @@ func main() {
 		}
 
 		if n_verify(i) {
-			var product, counter int = 1, 1
-			for j := i; counter < 4; j++ {
-				product *= number_list[j-10*counter]
+			var product int = 1
+			for counter := 0; counter < 4; counter++ {
+				product *= number_list[i-10*counter]
 			}
 			if product > greatest {
 				greatest = product
@@ -94,18 +137,15 @@ func main() {
 		}
 
 		if s_verify(i, lenght) {
-			var product, counter int = 1, 0
-			for j := i; counter < 4; j++ {
-				product *= number_list[j+10*counter]
+			var product int = 1
+			for counter := 0; counter < 4; counter++ {
+				product *= number_list[i+10*counter]
 			}
 			if product > greatest {
 				greatest = product
 			}
 		}
+
 	}
 	fmt.Println(greatest)
 }
-
-
-/* Lembrar que é uma matriz 20x20 e para verificar que existe uma diagonal é necessário as condições de norte e sul, junto com a verificação de que é menor que 20 ou não 
-logaicamente, dependendo da casa atual*/
