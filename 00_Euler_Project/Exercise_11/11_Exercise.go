@@ -92,7 +92,7 @@ func main() {
 	var number_list []int
 
 	// Convertion: bytes -> str -> int
-	for i := 0; i < len(b)-1; i++ {
+	for i := 0; i < len(b)-1; i++ { // len b?
 		if b[i] >= 48 && b[i] <= 57 && b[i+1] >= 48 && b[i+1] <= 57 {
 			c := string(b[i]) + string(b[i+1])
 			n, err := strconv.Atoi(c)
