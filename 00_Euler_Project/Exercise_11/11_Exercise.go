@@ -7,7 +7,7 @@ import (
 )
 
 func horizontal_verify(index int, length int) bool {
-	if index-3 < 0 || index+3 > length-1 {
+	if index+3 > length-1 {
 		return false
 	}
 
@@ -19,10 +19,23 @@ func horizontal_verify(index int, length int) bool {
 }
 
 func vertical_verify(index int, length int) bool {
-	if index-60 < 0 || index+60 > length-1 {
+	if index+60 > length-1 {
 		return false
 	}
+	return true
+}
 
+func down_diagonal_verify(index int, length int) bool {
+	if index+60+3 > length-1 {
+		return false
+	}
+	return true
+}
+
+func up_diagonal_verify(index int) bool {
+	if index-60-3 <= 0 {
+		return false
+	}
 	return true
 }
 
@@ -84,8 +97,43 @@ func main() {
 				}
 			}
 		}
+
+		if down_diagonal_verify(i, length) {
+			var product int = 1
+			var candidate [4]int
+			for counter := 0; counter < 4; counter++ {
+				product *= number_list[i+20*counter-counter]
+				candidate[counter] = number_list[i+20*counter+counter]
+			}
+			fmt.Println(candidate)
+			if product > greatest {
+				greatest = product
+				for i := 0; i < 4; i++ {
+					great_list[i] = candidate[i]
+				}
+			}
+		}
+
+		if up_diagonal_verify(i) {
+			var product int = 1
+			var candidate [4]int
+			for counter := 0; counter < 4; counter++ {
+				product *= number_list[i-20*counter-counter]
+				candidate[counter] = number_list[i-20*counter-counter]
+			}
+			 // fmt.Println(candidate)
+			if product > greatest {
+				greatest = product
+				for i := 0; i < 4; i++ {
+					great_list[i] = candidate[i]
+				}
+			}
+		}
 	}
 	fmt.Println(greatest)
 	fmt.Println(great_list)
 
 }
+/* 70600674
+[89 69 7 46]
+/*
