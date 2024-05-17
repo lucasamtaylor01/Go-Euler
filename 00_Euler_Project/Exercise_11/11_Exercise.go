@@ -103,9 +103,9 @@ func main() {
 			}
 		}
 	}
-	var greatest, lenght int = 0, len(number_list)
+	var greatest, length int = 0, len(number_list)
 
-	for i := 0; i < lenght; i++ {
+	for i := 0; i < length; i++ {
 		if w_verify(i) {
 			var product int = 1
 			for counter := 3; counter <= 0; counter-- { // zero tá incluso?
@@ -116,7 +116,7 @@ func main() {
 			}
 		}
 
-		if e_verify(i, lenght) {
+		if e_verify(i, length) {
 			var product int = 1
 			for counter := 0; counter < 4; counter++ {
 				product *= number_list[i+counter]
@@ -136,10 +136,50 @@ func main() {
 			}
 		}
 
-		if s_verify(i, lenght) {
+		if s_verify(i, length) {
 			var product int = 1
 			for counter := 0; counter < 4; counter++ {
 				product *= number_list[i+10*counter]
+			}
+			if product > greatest {
+				greatest = product
+			}
+		}
+
+		if ne_verify(i, length) {
+			var product int = 1
+			for counter := 0; counter < 4; counter++ {
+				product *= number_list[i-10*counter+counter]
+			}
+			if product > greatest {
+				greatest = product
+			}
+		}
+
+		if nw_verify(i) {
+			var product int = 1
+			for counter := 0; counter < 4; counter++ {
+				product *= number_list[i-10*counter-counter]
+			}
+			if product > greatest {
+				greatest = product
+			}
+		}
+
+		if sw_verify(i, length) {
+			var product int = 1
+			for counter := 0; counter < 4; counter++ {
+				product *= number_list[i+10*counter-counter]
+			}
+			if product > greatest {
+				greatest = product
+			}
+		}
+
+		if se_verify(i, length) {
+			var product int = 1
+			for counter := 0; counter < 4; counter++ {
+				product *= number_list[i+10*counter+counter]
 			}
 			if product > greatest {
 				greatest = product
