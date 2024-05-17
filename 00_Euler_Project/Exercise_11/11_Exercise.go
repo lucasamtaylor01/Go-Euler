@@ -6,78 +6,24 @@ import (
 	"strconv"
 )
 
-func w_verify(index int) bool {
-	if index-3 < 0 {
+func horizontal_verify(index int, length int) bool {
+	if index-3 < 0 || index+3 > length-1 {
 		return false
 	}
 
-	for i := index; i < index-3; i-- {
-		if i%20 == 0 {
-			return false
-		}
+	if (index+4)%20 == 0 {
+		return false
 	}
+
 	return true
 }
 
-func e_verify(index, list_length int) bool {
-	if index+3 >= list_length {
+func vertical_verify(index int, length int) bool {
+	if index-60 < 0 || index+60 > length-1 {
 		return false
 	}
 
-	for i := index; i < index+3; i++ {
-		if (i+1)%20 == 0 {
-			return false
-		}
-	}
 	return true
-}
-
-func s_verify(index, list_length int) bool {
-	if index+60 < list_length {
-		return true
-	} else {
-		return false
-	}
-}
-
-func n_verify(index int) bool {
-	if index-60 >= 0 {
-		return true
-	} else {
-		return false
-	}
-}
-
-func ne_verify(index, list_length int) bool {
-	if n_verify(index) && e_verify(index, list_length) {
-		return true
-	} else {
-		return false
-	}
-}
-
-func nw_verify(index int) bool {
-	if n_verify(index) && w_verify(index) {
-		return true
-	} else {
-		return false
-	}
-}
-
-func se_verify(index, list_length int) bool {
-	if s_verify(index, list_length) && e_verify(index, list_length) {
-		return true
-	} else {
-		return false
-	}
-}
-
-func sw_verify(index, list_length int) bool {
-	if s_verify(index, list_length) && w_verify(index) {
-		return true
-	} else {
-		return false
-	}
 }
 
 func main() {
@@ -104,88 +50,42 @@ func main() {
 		}
 	}
 	var greatest, length int = 0, len(number_list)
+	var great_list [4]int
 
 	for i := 0; i < length; i++ {
-		if w_verify(i) {
+		if horizontal_verify(i, length) {
 			var product int = 1
-			for counter := 3; counter <= 0; counter-- { // zero tá incluso?
-				product *= number_list[i+counter]
-			}
-			if product > greatest {
-				greatest = product
-			}
-		}
-
-		if e_verify(i, length) {
-			var product int = 1
+			var candidate [4]int
 			for counter := 0; counter < 4; counter++ {
 				product *= number_list[i+counter]
+				candidate[counter] = number_list[i+counter]
 			}
+
 			if product > greatest {
 				greatest = product
+				for i := 0; i < 4; i++ {
+					great_list[i] = candidate[i]
+				}
 			}
 		}
 
-		if n_verify(i) {
+		if vertical_verify(i, length) {
 			var product int = 1
+			var candidate [4]int
 			for counter := 0; counter < 4; counter++ {
-				product *= number_list[i-10*counter]
+				product *= number_list[i+20*counter]
+				candidate[counter] = number_list[i+20*counter]
 			}
+
 			if product > greatest {
 				greatest = product
+				for i := 0; i < 4; i++ {
+					great_list[i] = candidate[i]
+				}
 			}
 		}
-
-		if s_verify(i, length) {
-			var product int = 1
-			for counter := 0; counter < 4; counter++ {
-				product *= number_list[i+10*counter]
-			}
-			if product > greatest {
-				greatest = product
-			}
-		}
-
-		if ne_verify(i, length) {
-			var product int = 1
-			for counter := 0; counter < 4; counter++ {
-				product *= number_list[i-10*counter+counter]
-			}
-			if product > greatest {
-				greatest = product
-			}
-		}
-
-		if nw_verify(i) {
-			var product int = 1
-			for counter := 0; counter < 4; counter++ {
-				product *= number_list[i-10*counter-counter]
-			}
-			if product > greatest {
-				greatest = product
-			}
-		}
-
-		if sw_verify(i, length) {
-			var product int = 1
-			for counter := 0; counter < 4; counter++ {
-				product *= number_list[i+10*counter-counter]
-			}
-			if product > greatest {
-				greatest = product
-			}
-		}
-
-		if se_verify(i, length) {
-			var product int = 1
-			for counter := 0; counter < 4; counter++ {
-				product *= number_list[i+10*counter+counter]
-			}
-			if product > greatest {
-				greatest = product
-			}
-		}
-
 	}
 	fmt.Println(greatest)
+	fmt.Println(great_list)
+
 }
