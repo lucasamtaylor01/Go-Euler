@@ -69,7 +69,7 @@ func DiagonalTypeTwoVerify(index int) bool {
 	return true
 }
 
-// Update the great_list if there's a greatest		 product
+// Update the great_list if there's a greatest product
 func UpdateGreatestList(great_list [4]int, candidate [4]int) [4]int {
 	for i := 0; i < 4; i++ {
 		great_list[i] = candidate[i]
