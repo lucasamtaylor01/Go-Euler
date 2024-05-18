@@ -22,7 +22,7 @@ func main() {
 	// Inicializate de variables
 	var candidate, solution int = 2520, 0
 
-	// Loop of verification
+	// Loop of candidate verification
 	for solution == 0 {
 		if DivibleVerify(candidate) {
 			solution = candidate

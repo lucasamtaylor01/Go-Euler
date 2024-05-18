@@ -10,11 +10,16 @@ package main
 import "fmt"
 
 func main() {
+	// Initialize sum to accumulate the multiples of 3 and 5
 	sum := 0
+
+	// Loop to search and add the multiples of 3 and 5
 	for i := 0; i < 1000; i++ {
 		if i%5 == 0 || i%3 == 0 {
 			sum += i
 		}
 	}
-	fmt.Print(sum, "\n")
+
+	// Show solution
+	fmt.Print(sum)
 }

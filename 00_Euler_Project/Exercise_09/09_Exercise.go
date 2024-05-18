@@ -7,12 +7,21 @@ package main
 import "fmt"
 
 func main() {
+	// Indicator to stop the loop
 	var ind int = 0
+
+	// Loops to analyse candidates and define the solution
 	for m := 21; ind == 0; m-- {
 		for n := 0; n < m; n++ {
 			if m*(m+n) == 500 {
+
+				// Define the variables with Euclid's Formula
 				var a, b, c int = (m * m) - (n * n), 2 * m * n, (m * m) + (n * n)
+
+				// Show the solution
 				fmt.Println("Solution: ", a*b*c)
+
+				// End the Loops
 				ind = 1
 			}
 		}

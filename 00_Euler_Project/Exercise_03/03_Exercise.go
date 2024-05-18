@@ -8,6 +8,7 @@ import (
 	"math"
 )
 
+// Verify if the number is a prime
 func IsPrime(n int) bool {
 	for i := 2; i <= int(math.Sqrt(float64(n))); i++ {
 		if n%i == 0 {
@@ -17,9 +18,10 @@ func IsPrime(n int) bool {
 	return true
 }
 func main() {
-	var a int = 600851475143
-	for i := int(math.Sqrt(float64(a))); i >= 1; i-- {
-		if a%i == 0 {
+
+	// Loop to search the largest prime factor of a
+	for i := int(math.Sqrt(float64(600851475143))); i >= 1; i-- {
+		if 600851475143%i == 0 {
 			if IsPrime(i) {
 				fmt.Println("Solution: ", i)
 				break

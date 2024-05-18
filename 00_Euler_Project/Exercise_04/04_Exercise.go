@@ -5,6 +5,7 @@ package main
 
 import "fmt"
 
+// Verify if the number is a palindrome
 func PalindromeVerify(n int) bool {
 	var a1 int = n / 100000
 	var a2 int = (n % 100000) / 10000
@@ -21,8 +22,10 @@ func PalindromeVerify(n int) bool {
 }
 
 func main() {
-	var a int = 999
-	var candidate, solution int = 0, 0
+	// Create variables to initialize the search
+	var candidate, solution, a int = 0, 0, 999
+
+	// Loop to search the search candidates and analyse them
 	for i := a - 1; i >= 100; i-- {
 		candidate = a * i
 		if candidate/100000 != 0 {
@@ -39,5 +42,7 @@ func main() {
 			continue
 		}
 	}
+
+	// Show solution
 	fmt.Println("Solution: ", solution)
 }
