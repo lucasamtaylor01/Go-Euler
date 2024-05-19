@@ -1,12 +1,10 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func DivisorCounter(n int) int {
-	var counter int = 0
-	for i := 1; i < n; i++ {
+	var counter int = 1
+	for i := 1; i <= n/2; i++ {
 		if n%i == 0 {
 			counter++
 		}
@@ -16,6 +14,18 @@ func DivisorCounter(n int) int {
 }
 
 func main() {
+	var triangle_number, great, i int = 0, 0, 1
+	for true {
+		triangle_number += i
+		if DivisorCounter(triangle_number) > great {
+			fmt.Println(triangle_number, DivisorCounter(triangle_number), i, great)
+			great = DivisorCounter(triangle_number)
+		}
 
-	fmt.Println(DivisorCounter(28))
+		if DivisorCounter(triangle_number) >= 500 {
+			break
+		}
+
+		i++
+	}
 }
