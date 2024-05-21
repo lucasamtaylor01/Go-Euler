@@ -59,11 +59,10 @@ func TriangleNumber(n int) int {
 }
 
 func main() {
-	var triangle_number, i int = 0, 1000
+	var triangle_number, i int = 0, 1
 	for true {
 		triangle_number = TriangleNumber(i)
 		if DivisorCounter(TriangleNumber(i)) >= 500 {
-			fmt.Println(i)
 			break
 		}
 		i++
