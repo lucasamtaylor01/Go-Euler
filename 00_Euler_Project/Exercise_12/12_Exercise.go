@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func NoContains(s []int, e int) bool {
 	for _, a := range s {
@@ -15,25 +13,26 @@ func NoContains(s []int, e int) bool {
 
 func DivisorCounter(n int) int {
 	divisor_list := make([]int, 0)
-	prime_list, fac_list := FactorizationList(n)
+	fac_list, prime_list := FactorizationList(n)
+
 	for i := 0; i < len(prime_list); i++ {
-		var divisor_counter int = 1
-		var j int = 0
-		for j < len(fac_list) {
+		var counter int = 1
+		for j := 0; j < len(fac_list); j++ {
 			if prime_list[i] == fac_list[j] {
-				fmt.Println(prime_list[i], fac_list[j])
-				divisor_list = append(divisor_list, divisor_counter)
-				divisor_counter++
-			} else {
-				j++
+				counter++
 			}
 		}
-
+		divisor_list = append(divisor_list, counter)
 	}
 
-	fmt.Println(prime_list, fac_list, divisor_list)
-	return 0
+	var number_of_divisors int = 1
+	for i := 0; i < len(divisor_list); i++ {
+		number_of_divisors *= divisor_list[i]
+	}
+
+	return number_of_divisors
 }
+
 func FactorizationList(n int) ([]int, []int) {
 	fac_list := make([]int, 0)
 	prime_list := make([]int, 0)
@@ -52,8 +51,23 @@ func FactorizationList(n int) ([]int, []int) {
 
 	return fac_list, prime_list
 }
-func main() {
-	fmt.Println(DivisorCounter(48))
+
+func TriangleNumber(n int) int {
+	var triangle_number int = int(((n * n) + n) / 2)
+
+	return triangle_number
 }
 
-// 76576500
+func main() {
+	var triangle_number, i int = 0, 1000
+	for true {
+		triangle_number = TriangleNumber(i)
+		if DivisorCounter(TriangleNumber(i)) >= 500 {
+			fmt.Println(i)
+			break
+		}
+		i++
+	}
+
+	fmt.Println(triangle_number, DivisorCounter(triangle_number))
+}
