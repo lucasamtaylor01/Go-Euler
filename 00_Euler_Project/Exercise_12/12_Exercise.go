@@ -71,6 +71,3 @@ func main() {
 
 	fmt.Println(triangle_number, DivisorCounter(triangle_number))
 }
-
-
-// Talvez aplicar o algoritmo de busca binária??
