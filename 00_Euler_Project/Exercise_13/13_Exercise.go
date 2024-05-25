@@ -46,17 +46,15 @@ func main() {
 
 	var partial_sum int = 0
 	var a, c int = len(number_list) - 1, 49
-
 	var big_number []int
 
 	big_number = FillSlice([]int(big_number))
 	var index int = len(big_number) - 1
+	var i int = c
 
-	for i := c; i <= a; i += 50 {
+	for true {
 		partial_sum += number_list[i]
-
 		if i == a {
-
 			var x, y, z int = NumberDistribution(partial_sum)
 			big_number[index] += z
 			if big_number[index] >= 10 {
@@ -74,20 +72,23 @@ func main() {
 				big_number[index-3]++
 			}
 			partial_sum = 0
-
 			index--
 			a--
 			c--
 			i = c
-			fmt.Println(big_number)
+
 			if i < 0 {
 				break
 			}
 
+		} else {
+			i += 50
 		}
 
 	}
-	for i := 0; i < len(big_number); i++ {
+
+	for i := 0; i < 10; i++ {
 		print(big_number[i])
 	}
+
 }
