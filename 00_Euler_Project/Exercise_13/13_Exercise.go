@@ -7,13 +7,20 @@ import (
 )
 
 func FillSlice(a []int) []int {
-	for i := 0; i < 50; i++ {
+	for i := 0; i < 52; i++ {
 		a = append(a, 0)
 	}
 
 	return a
 }
 
+func NumberDistribution(n int) (int, int, int) {
+	var a int = n / 100
+	var b int = (n % 100) / 10
+	var c int = ((n % 100) % 10)
+
+	return a, b, c
+}
 func main() {
 
 	// Read file
@@ -37,23 +44,50 @@ func main() {
 		}
 	}
 
-	var partial_sum, accumulated int = 0, 0
+	var partial_sum int = 0
 	var a, c int = len(number_list) - 1, 49
+
 	var big_number []int
 
 	big_number = FillSlice([]int(big_number))
+	var index int = len(big_number) - 1
 
 	for i := c; i <= a; i += 50 {
 		partial_sum += number_list[i]
-		if partial_sum > 10 {
-			accumulated++
-			partial_sum -= 10
-		}
+
 		if i == a {
-			fmt.Println(partial_sum, accumulated)
-			fmt.Println(accumulated / 10)
-			break
+
+			var x, y, z int = NumberDistribution(partial_sum)
+			big_number[index] += z
+			if big_number[index] >= 10 {
+				big_number[index] -= 10
+				big_number[index-1]++
+			}
+			big_number[index-1] += y
+			if big_number[index-1] >= 10 {
+				big_number[index-1] -= 10
+				big_number[index-2]++
+			}
+			big_number[index-2] += x
+			if big_number[index-2] >= 10 {
+				big_number[index-2] -= 10
+				big_number[index-3]++
+			}
+			partial_sum = 0
+
+			index--
+			a--
+			c--
+			i = c
+			fmt.Println(big_number)
+			if i < 0 {
+				break
+			}
+
 		}
 
+	}
+	for i := 0; i < len(big_number); i++ {
+		print(big_number[i])
 	}
 }
