@@ -6,6 +6,7 @@ import (
 	"strconv"
 )
 
+// Fill the slice with zeros
 func FillSlice(a []int) []int {
 	for i := 0; i < 52; i++ {
 		a = append(a, 0)
@@ -14,6 +15,7 @@ func FillSlice(a []int) []int {
 	return a
 }
 
+// Defining hundreds, tens and units of a number
 func NumberDistribution(n int) (int, int, int) {
 	var a int = n / 100
 	var b int = (n % 100) / 10
@@ -21,6 +23,7 @@ func NumberDistribution(n int) (int, int, int) {
 
 	return a, b, c
 }
+
 func main() {
 
 	// Read file
@@ -44,18 +47,26 @@ func main() {
 		}
 	}
 
+	// Variable that stores the sum of the column
 	var partial_sum int = 0
-	var a, c int = len(number_list) - 1, 49
-	var big_number []int
 
+	// Creating the variable that stores the 52-digit numbers
+	var big_number []int
 	big_number = FillSlice([]int(big_number))
+
+	// Loop control variables
+	var a, c int = len(number_list) - 1, 49
 	var index int = len(big_number) - 1
 	var i int = c
 
 	for true {
+
+		// Sum of columns
 		partial_sum += number_list[i]
 		if i == a {
 			var x, y, z int = NumberDistribution(partial_sum)
+
+			// Distribution of hundreds, tens and units of a number on slice
 			big_number[index] += z
 			if big_number[index] >= 10 {
 				big_number[index] -= 10
@@ -71,6 +82,8 @@ func main() {
 				big_number[index-2] -= 10
 				big_number[index-3]++
 			}
+
+			// Loop control
 			partial_sum = 0
 			index--
 			a--
@@ -87,6 +100,7 @@ func main() {
 
 	}
 
+	//Show answer
 	for i := 0; i < 10; i++ {
 		print(big_number[i])
 	}
