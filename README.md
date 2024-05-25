@@ -13,7 +13,7 @@ This project is purely educational and self-driven. I am not using ChatGPT or an
 
 ## 100 days progress
 ✅✅✅✅✅✅✅✅✅✅
-✅✅⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
+✅✅✅⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
@@ -24,8 +24,8 @@ This project is purely educational and self-driven. I am not using ChatGPT or an
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 
 ## Attempt Status
-  - **Current Streak:** 12 days 🌟
-  - **Best Record:** 12 days 🏆
+  - **Current Streak:** 13 days 🌟
+  - **Best Record:** 13 days 🏆
   - **Current Attempt:** 2 🎯
   - **Failed Attempts:** 1 🚫
 
