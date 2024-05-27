@@ -18,10 +18,9 @@ import "fmt"
 
 // Verify the chain lenght
 func ChainLenght(n int) int {
-	var chain []int
-
+	var chain_counter int = 1
 	for n != 1 {
-		chain = append(chain, n)
+		chain_counter++
 
 		// Apply collatz number logic
 		if n%2 == 0 {
@@ -31,7 +30,7 @@ func ChainLenght(n int) int {
 		}
 	}
 
-	return len(chain) + 1
+	return chain_counter
 }
 
 func main() {
@@ -51,4 +50,6 @@ func main() {
 	fmt.Println(number_chain)
 }
 
-//Coments: I know that is not efficient. In future, rewrite the code can be a good ideia
+/*
+Coments: I know that is not efficient. In future, rewrite the code can be a good ideia
+*/
