@@ -1,21 +1,32 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-func main() {
-	fmt.Println("Hello World!")
+// inocent algorithm
+func ChainLenght(n int) int {
+	var chain []int
+
+	for n != 1 {
+		chain = append(chain, n)
+		if n%2 == 0 {
+			n = n / 2
+		} else {
+			n = (3*n + 1)
+		}
+	}
+
+	return len(chain) + 1
 }
 
-/*
-SEARCHING PHASE:
+func main() {
+	var biggest_chain, number_chain int = 0, 0
+	for i := 2; i < 1000000; i++ {
+		var chain_len int = ChainLenght(i)
+		if biggest_chain < chain_len {
+			biggest_chain = chain_len
+			number_chain = i
+		}
+	}
 
-	- http://arxiv.org/pdf/1510.01274
-	- https://www.jasondavies.com/collatz-graph/
-	- https://www.geogebra.org/m/s5eb2wcy
-	- https://oeis.org/A008908
-	- https://oeis.org/A064433
-	- https://en.wikipedia.org/wiki/Collatz_conjecture
-
-*/
+	fmt.Println(number_chain)
+}
