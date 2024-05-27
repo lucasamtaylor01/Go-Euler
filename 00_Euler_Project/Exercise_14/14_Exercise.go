@@ -50,6 +50,5 @@ func main() {
 	fmt.Println(number_chain)
 }
 
-/*
-Coments: I know that is not efficient. In future, rewrite the code can be a good ideia
-*/
+//I know that is not efficient. In future, rewrite the code can be a good ideia
+
