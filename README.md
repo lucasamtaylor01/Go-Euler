@@ -9,11 +9,11 @@ Welcome to my repository! 🎉 I'm tackling the [Project Euler](https://projecte
 - **Go Proficiency:** Enhance my Go programming skills. 🐹📈
   
 ## Note
-This project is purely educational and self-driven. I am not using ChatGPT or any other AI-based coding assistant in this challenge 🚫🤖.
+This project is purely educational and self-driven. I am not seeking answers from any AI-based assistants in this challenge 🚫🤖.
 
 ## 100 days progress
 ✅✅✅✅✅✅✅✅✅✅
-✅✅✅✅✅✅⬜️⬜️⬜️⬜️
+✅✅✅✅✅✅✅⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
@@ -24,8 +24,8 @@ This project is purely educational and self-driven. I am not using ChatGPT or an
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 
 ## Attempt Status
-  - **Current Streak:** 16 days 🌟
-  - **Best Record:** 16 days 🏆
+  - **Current Streak:** 17 days 🌟
+  - **Best Record:** 17 days 🏆
   - **Current Attempt:** 2 🎯
   - **Failed Attempts:** 1 🚫
 
