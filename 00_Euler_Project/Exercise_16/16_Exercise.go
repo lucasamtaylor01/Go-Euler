@@ -11,7 +11,7 @@ func main() {
 	a := new(big.Int)
 	a.Exp(big.NewInt(2), big.NewInt(1000), nil)
 
-	// Convert the big number to string
+	// Convert the big int to string
 	str := a.String()
 
 	// Define the sum
