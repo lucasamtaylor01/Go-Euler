@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-// Source: https://stackoverflow.com/qustions/11270547/go-big-int-factorial-with-recursion
+// Source: https://stackoverflow.com/questions/11270547/go-big-int-factorial-with-recursion
 func factorial(n *big.Int) (result *big.Int) {
 	b := big.NewInt(0)
 	c := big.NewInt(1)
