@@ -1,3 +1,9 @@
+/*
+n! means n x (n - 1) x ... x 3 x 2 x 1.
+For example, 10! = 10 x 9 x ... x 3 x 2 x 1 = 3628800,<br>and the sum of the digits in the number 10! is 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
+Find the sum of the digits in the number 100
+*/
+
 package main
 
 import (
@@ -6,7 +12,7 @@ import (
 	"strconv"
 )
 
-// Source: https://stackoverflow.com/questions/11270547/go-big-int-factorial-with-recursion
+// Source: https://stackoverflow.com/qustions/11270547/go-big-int-factorial-with-recursion
 func factorial(n *big.Int) (result *big.Int) {
 	b := big.NewInt(0)
 	c := big.NewInt(1)
