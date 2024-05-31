@@ -5,11 +5,11 @@
 - We can use: func (*Int) String 
 - Source: golang.org/pkg/math/big/#Int.String
 - How I used: `str := n.String()`
-- 
+
 
 ## FUNCTION WITH BIG INT AS A PARAMETER
-- Usar um ponteiro (*big.Int) na função DigitCounter evita cópias grandes, tornando o código mais eficiente;
-- Sempre usar ponteiros para bigint, exemplo:
+- Using a pointer (*big.Int) in the DigitCounter function avoids large copies, making the code more efficient;
+- Always use pointers to bigint, for example:
 ```
 func AddBigInts(a, b *big.Int) *big.Int {
 	result := new(big.Int)
