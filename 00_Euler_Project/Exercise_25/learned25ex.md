@@ -3,7 +3,7 @@
 ## CONVERTION BIGINT TO STRING
 - https://stackoverflow.com/questions/11810948/convert-a-bigint-to-a-string-or-integer-in-go
 - We can use: func (*Int) String 
-- Source: golang.org/pkg/math/big/#Int.String
+- Source: https://pkg.go.dev/math/big#Int.String
 - How I used: `str := n.String()`
 
 
