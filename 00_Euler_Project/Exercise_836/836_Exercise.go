@@ -8,10 +8,8 @@ Find f(20230401, 57). Give as your answer the concatenation of the first letters
 
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	fmt.Println("Hello")
+	fmt.Println("aprilfoolsjoke")
 }
