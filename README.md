@@ -14,7 +14,7 @@ This project is purely educational and self-driven. I am not seeking answers fro
 ## 100 days progress
 ✅✅✅✅✅✅✅✅✅✅
 ✅✅✅✅✅✅✅✅✅✅
-✅⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
+✅✅⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
@@ -24,8 +24,8 @@ This project is purely educational and self-driven. I am not seeking answers fro
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 
 ## Attempt Status
-  - **Current Streak:** 21 days 🌟
-  - **Best Record:** 21 days 🏆
+  - **Current Streak:** 22 days 🌟
+  - **Best Record:** 22 days 🏆
   - **Current Attempt:** 2 🎯
   - **Failed Attempts:** 1 🚫
 
