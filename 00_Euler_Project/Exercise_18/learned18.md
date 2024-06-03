@@ -53,9 +53,7 @@ func main() {
 
 1. What's `defer`?
 
-    Go's defer statement schedules a function call (the deferred function) to be run immediately before the function executing the defer returns.
-
-    In this case, `defer` is used to close the file .txt as soon as the main function end.
+    Go's defer statement schedules a function call (the deferred function) to be run immediately before the function executing the defer returns. In this case, `defer` is used to close the file .txt as soon function main ends.
 
     *Source:* https://go.dev/doc/effective_go#defer
 
