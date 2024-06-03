@@ -14,7 +14,7 @@ This project is purely educational and self-driven. I am not seeking answers fro
 ## 100 days progress
 ✅✅✅✅✅✅✅✅✅✅
 ✅✅✅✅✅✅✅✅✅✅
-✅✅⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
+✅✅✅⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
