@@ -8,18 +8,6 @@ Welcome to my repository! 🎉 I'm tackling the [Project Euler](https://projecte
 - **Problem Solving:** Improve my problem-solving skills 🧠💡
 - **Go Proficiency:** Enhance my Go programming skills. 🐹📈
 
-## 100 days progress
-✅✅✅✅✅✅✅✅✅✅
-✅✅✅✅✅✅✅✅✅✅
-✅✅✅✅⬜️⬜️⬜️⬜️⬜️⬜️
-⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
-⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
-⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
-⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
-⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
-⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
-⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
-
 ## Attempt Status
   - **Current Streak:** 24 days 🌟
   - **Best Record:** 24 days 🏆
