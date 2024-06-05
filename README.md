@@ -7,14 +7,11 @@ Welcome to my repository! 🎉 I'm tackling the [Project Euler](https://projecte
 - **Daily Commitment:** Commit to coding every day for 100 days 📆🔥.
 - **Problem Solving:** Improve my problem-solving skills 🧠💡
 - **Go Proficiency:** Enhance my Go programming skills. 🐹📈
-  
-## Note
-This project is purely educational and self-driven. I am not seeking answers from any AI-based assistants in this challenge 🚫🤖.
 
 ## 100 days progress
 ✅✅✅✅✅✅✅✅✅✅
 ✅✅✅✅✅✅✅✅✅✅
-✅✅✅⬜️⬜️⬜️⬜️⬜️⬜️⬜️
+✅✅✅✅⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
@@ -24,8 +21,8 @@ This project is purely educational and self-driven. I am not seeking answers fro
 ⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️
 
 ## Attempt Status
-  - **Current Streak:** 23 days 🌟
-  - **Best Record:** 23 days 🏆
+  - **Current Streak:** 24 days 🌟
+  - **Best Record:** 24 days 🏆
   - **Current Attempt:** 2 🎯
   - **Failed Attempts:** 1 🚫
 
