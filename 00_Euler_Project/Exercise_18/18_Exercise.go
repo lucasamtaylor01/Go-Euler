@@ -17,7 +17,7 @@ func main() {
 	}
 	defer file.Close()
 
-	var matrix [][]int
+	var m [][]int
 	scanner := bufio.NewScanner(file)
 
 	// Read the file line by line
@@ -31,7 +31,7 @@ func main() {
 			num, _ := strconv.Atoi(str)
 			row = append(row, num)
 		}
-		matrix = append(matrix, row)
+		m = append(m, row)
 	}
 
 	if err := scanner.Err(); err != nil {
@@ -39,27 +39,32 @@ func main() {
 		return
 	}
 
-	var greatest_list []int
-	greatest_list = append(greatest_list, 75)
-	var pre_index = 0
-	for i := 1; i < len(matrix); i++ {
-		var great int = 0
+	// Try to create subslices to analyse the best path
 
-		//Try to aply to next 3 steps
-		if matrix[i][pre_index] >= matrix[i][pre_index+1] {
-			great = matrix[i][pre_index]
-		} else {
-			great = matrix[i][pre_index+1]
-			pre_index++
+	//var sum int = m[1][0] + m[2][0] + m[3][0]
+	var i, j, k, l int = 0, 0, 0, 1
+	// len(m)-2
+	for l < 3 {
+		fmt.Println(m[l][i], m[l+1][j], m[l+2][k])
+		fmt.Println(l, ":", i, "/", l+1, ":", j, "/", l+2, ":", k)
+		k++
+		if k >= len(m[l]) {
+			k = 0
+			j++
+			if j >= len(m[l]) {
+				k = 0
+				j = 0
+				i++
+				if i >= len(m[l]) {
+					i = 0
+					k = 0
+					j = 0
+					l++
+				}
+			}
+
 		}
-		greatest_list = append(greatest_list, great)
+
 	}
 
-	fmt.Println(greatest_list)
-
-	var sum int = 0
-	for i := 0; i < len(greatest_list); i++ {
-		sum += greatest_list[i]
-	}
-	fmt.Println(sum)
 }
