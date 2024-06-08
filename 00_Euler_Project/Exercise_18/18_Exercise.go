@@ -39,32 +39,33 @@ func main() {
 		return
 	}
 
-	// Try to create subslices to analyse the best path
-
-	//var sum int = m[1][0] + m[2][0] + m[3][0]
-	var i, j, k, l int = 0, 0, 0, 1
-	// len(m)-2
-	for l < 3 {
-		fmt.Println(m[l][i], m[l+1][j], m[l+2][k])
-		fmt.Println(l, ":", i, "/", l+1, ":", j, "/", l+2, ":", k)
-		k++
-		if k >= len(m[l]) {
-			k = 0
-			j++
-			if j >= len(m[l]) {
-				k = 0
-				j = 0
-				i++
-				if i >= len(m[l]) {
-					i = 0
-					k = 0
-					j = 0
-					l++
-				}
+	var l int = 1
+	var ceil_i, ceil_j, ceil_k int = len(m[l]), len(m[l]), len(m[l+1])
+	var floor_i, floor_j, floor_k int = 0, 0, 0
+	for i := floor_i; i < ceil_i; i++ {
+		for j := floor_j; j < ceil_j; j++ {
+			for k := floor_k; k < floor_k+2; k++ {
+				fmt.Println(m[l][i], m[l+1][j], m[l+2][k])
+				fmt.Println(l, ":", i, "/", l+1, ":", j, "/", l+2, ":", k)
+				fmt.Println(floor_k, ":", ceil_k)
 			}
-
+			floor_k++
 		}
-
+		floor_j++
+		ceil_j++
 	}
+	floor_i++
+	ceil_i++
+	l++
 
 }
+
+/*
+	95-17-18
+	95-17-35
+	95-47-18
+	95-47-35
+	**64-17-18
+	64-17-35
+	64-47-
+*/
