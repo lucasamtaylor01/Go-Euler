@@ -8,6 +8,30 @@ import (
 	"strings"
 )
 
+func GreatPath(m [][]int, l int, last_index int) (int, int) {
+	var sum, great, great_index int
+	var floor_i, floor_j, floor_k int = last_index, 0, 0
+	for i := floor_i - 1; i < floor_i+1; i++ {
+		for j := floor_j; j < floor_j+2; j++ {
+			for k := floor_k; k < floor_k+2; k++ {
+				fmt.Println(m[l][i], m[l+1][j], m[l+2][k])
+				sum += m[l][i] + m[l+1][j] + m[l+2][k]
+			}
+			if great < sum {
+				great_index = i
+				great = sum
+			}
+			sum = 0
+			floor_k++
+		}
+		floor_j++
+		floor_k--
+		fmt.Println()
+	}
+
+	return m[l][great_index], great_index
+}
+
 func main() {
 	// Open the file
 	file, err := os.Open("triangle.txt")
@@ -39,21 +63,18 @@ func main() {
 		return
 	}
 
-	var l int = 0
-	var sum int = 0
-	var floor_i, floor_j, floor_k int = 0, 0, 0
-	for i := floor_i; floor_i+2 <= len(m[l])+1; i++ {
-		for j := floor_j; j < floor_j+2; j++ {
-			for k := floor_k; k < floor_k+2; k++ {
-				fmt.Println(m[l][i], m[l+1][j], m[l+2][k])
-				sum += m[l][i] + m[l+1][j] + m[l+2][k]
-			}
-			floor_k++
+	var great_path []int
+	great_path = append(great_path, 75)
+	great_path = append(great_path, 66)
+	great_path = append(great_path, 98)
+	var last_index, n int = 1, 0
+	for i := 1; i < 14; i++ {
+		n, last_index = GreatPath(m, i, last_index)
+		if last_index == 0 {
+			last_index++
 		}
-		floor_j++
-		floor_k--
-		fmt.Println()
-		floor_i++
+		great_path = append(great_path, n)
+		fmt.Println(great_path, last_index)
 	}
 
 }
