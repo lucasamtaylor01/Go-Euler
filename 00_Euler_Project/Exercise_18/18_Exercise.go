@@ -39,24 +39,21 @@ func main() {
 		return
 	}
 
-	var l int = 1
+	var l int = 0
+	var sum int = 0
 	var floor_i, floor_j, floor_k int = 0, 0, 0
-	for i := floor_i; i < floor_i+2; i++ {
+	for i := floor_i; floor_i+2 <= len(m[l])+1; i++ {
 		for j := floor_j; j < floor_j+2; j++ {
-			if floor_k+2 >= len(m[l+2]) {
-				floor_k--
-			}
-			for k := floor_k; k <= floor_k+2; k++ {
+			for k := floor_k; k < floor_k+2; k++ {
 				fmt.Println(m[l][i], m[l+1][j], m[l+2][k])
-				fmt.Println(l, ":", i, "/", l+1, ":", j, "/", l+2, ":", k)
+				sum += m[l][i] + m[l+1][j] + m[l+2][k]
 			}
 			floor_k++
-
 		}
 		floor_j++
+		floor_k--
 		fmt.Println()
+		floor_i++
 	}
-	floor_i++
-	l++
 
 }
